@@ -1,0 +1,163 @@
+.notifications {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 330px;
+    max-height: 250px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    &-header {
+        height: 48px;
+        background: #2e6dde;
+        font-size: 13px;
+        line-height: 15px;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+        .icon-down {
+            content: url("../../assets/down.svg");
+            cursor: pointer;
+        }
+        .icon-close {
+            content: url("../../assets/close.svg");
+            cursor: pointer;
+            margin-left: 20px;
+        }
+    }
+    &-subheader {
+        height: 30px;
+        background: #dae0e8;
+        font-size: 13px;
+        line-height: 15px;
+        color: #5f5353;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        align-items: center;
+        .cancel-button {
+            color:#2e6dde;
+            cursor: pointer;
+            &:hover {
+                color: #dc1a1a;
+            }
+        }
+    }
+
+    &-body {
+        flex: 1;
+        overflow: auto;
+        .notification-item {
+            height: 50px;
+            background: rgba(211, 224, 246, 0.35);
+            border-bottom: 1px solid #e9e9e9;
+            font-size: 12px;
+            line-height: 14px;
+            color: #2d2d2d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            .text-field {
+                word-wrap: break-word !important;
+                // width: 250px;
+            }
+            .percent {
+                width: 22px;
+                height: 22px;
+                .CircularProgressbar-path {
+                    stroke: #2e6dde;
+                }
+                .CircularProgressbar-trail {
+                    stroke: rgba(46, 109, 222, 0.29);
+                }
+            }
+            .icon-cancel {
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+                content: url("../../assets/upload-cancel.svg");
+                -webkit-mask: url("../../assets/upload-cancel.svg") no-repeat center;
+                -webkit-mask-size: contain;
+            }
+            .icon-warning {
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+                content: url("../../assets/upload-warning.svg");
+                -webkit-mask: url("../../assets/upload-warning.svg") no-repeat center;
+                -webkit-mask-size: contain;
+            }
+            .icon-completed {
+                width: 22px;
+                height: 22px;
+                cursor: pointer;
+                content: url("../../assets/upload-completed.svg");
+                -webkit-mask: url("../../assets/upload-completed.svg") no-repeat center;
+                -webkit-mask-size: contain;
+            }
+            .icon-folder {
+                content: "";
+                mask: url("../../assets/folder.svg") no-repeat center;
+                -webkit-mask: url("../../assets/folder.svg") no-repeat center;
+                margin-right: 15px;
+                background-color: #3f3e3e;
+                width: 16px;
+                height: 16px;
+                -webkit-mask-size: contain;
+            }
+            .icon-document {
+                content: "";
+                mask: url("../../assets/document.svg") no-repeat center;
+                -webkit-mask: url("../../assets/document.svg") no-repeat center;
+                margin-right: 15px;
+                background-color: #3182ce;
+                width: 16px;
+                height: 16px;
+                -webkit-mask-size: contain;
+            }
+            .icon-image {
+                content: "";
+                mask: url("../../assets/image.svg") no-repeat center;
+                -webkit-mask: url("../../assets/image.svg") no-repeat center;
+                margin-right: 15px;
+                background-color: #2f855a;
+                width: 16px;
+                height: 16px;
+                -webkit-mask-size: contain;
+            }
+            .icon-zip {
+                content: "";
+                mask: url("../../assets/zip.svg") no-repeat center;
+                -webkit-mask: url("../../assets/zip.svg") no-repeat center;
+                margin-right: 15px;
+                background-color: #3f3e3e;
+                width: 16px;
+                height: 16px;
+                -webkit-mask-size: contain;
+            }
+            .icon-video {
+                content: "";
+                mask: url("../../assets/video.svg") no-repeat center;
+                -webkit-mask: url("../../assets/video.svg") no-repeat center;
+                margin-right: 15px;
+                background-color: #c53030;
+                width: 16px;
+                height: 16px;
+                -webkit-mask-size: contain;
+            }
+        }
+    }
+    &.minimize {
+        .notifications-header {
+            .icon-down {
+                transform: rotate(180deg);
+            }
+        }
+        .notifications-body {
+            display: none;
+        }
+    }
+}

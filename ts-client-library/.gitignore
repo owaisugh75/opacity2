@@ -1,0 +1,10 @@
+.cache/
+dist/
+node_modules/
+
+packages/**/.cache/
+packages/**/dist/
+packages/**/node_modules/
+packages/**/src/**/*.js
+packages/**/src/**/*.js.map
+packages/**/src/**/*.d.ts
